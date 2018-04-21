@@ -1,0 +1,181 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Calc_CrossCorr_8_api.cpp </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_CrossCorr_8/Calc_CrossCorr_8_api.cpp" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_CrossCorr_8/Calc_CrossCorr_8_api.cpp</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * Calc_CrossCorr_8_api.cpp</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'Calc_CrossCorr_8_api'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Wed Oct 17 12:43:16 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;rt_nonfinite.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr_8.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr_8_api.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT><FONT COLOR="#117755"><I>/* Named Constants */</I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT><FONT COLOR="#117755"><I>/* Variable Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   20   </I></FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   22   </I></FONT>
+<FONT COLOR="#888888"><I>   23   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   24   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_b_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId, real_T y[64]);
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_c_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *i1, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier, real_T y[64]);
+<FONT COLOR="#888888"><I>   26   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_d_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_d_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId, real_T y[64]);
+<FONT COLOR="#888888"><I>   27   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_e_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *p, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier);
+<FONT COLOR="#888888"><I>   28   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *D1, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier, real_T y[64]);
+<FONT COLOR="#888888"><I>   29   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> mxArray *<A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallOut" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallOut');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallOut</FONT></A>(real_T u_data[64], int32_T u_sizes[1]);
+<FONT COLOR="#888888"><I>   30   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_f_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId);
+<FONT COLOR="#888888"><I>   31   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_g_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">g_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId, real_T ret[64]);
+<FONT COLOR="#888888"><I>   32   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_h_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">h_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId, real_T ret[64]);
+<FONT COLOR="#888888"><I>   33   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_i_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">i_emlrt_marshallIn</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId);
+<FONT COLOR="#888888"><I>   34   </I></FONT>
+<FONT COLOR="#888888"><I>   35   </I></FONT><FONT COLOR="#117755"><I>/* Function Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   36   </I></FONT>
+<FONT COLOR="#888888"><I>   37   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_b_emlrt_marshallIn">b_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId, real_T y[64])
+<FONT COLOR="#888888"><I>   38   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   39   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_g_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_g_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">g_emlrt_marshallIn</FONT></A>(emlrtAlias(u), parentId, y);
+<FONT COLOR="#888888"><I>   40   </I></FONT>    emlrtDestroyArray(&amp;u);
+<FONT COLOR="#888888"><I>   41   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   42   </I></FONT>
+<FONT COLOR="#888888"><I>   43   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_c_emlrt_marshallIn">c_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *i1, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier, real_T y[64])
+<FONT COLOR="#888888"><I>   44   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   45   </I></FONT>    emlrtMsgIdentifier thisId;
+<FONT COLOR="#888888"><I>   46   </I></FONT>    thisId.fIdentifier = identifier;
+<FONT COLOR="#888888"><I>   47   </I></FONT>    thisId.fParent = NULL;
+<FONT COLOR="#888888"><I>   48   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_d_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_d_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrt_marshallIn</FONT></A>(emlrtAlias(i1), &amp;thisId, y);
+<FONT COLOR="#888888"><I>   49   </I></FONT>    emlrtDestroyArray(&amp;i1);
+<FONT COLOR="#888888"><I>   50   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   51   </I></FONT>
+<FONT COLOR="#888888"><I>   52   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_d_emlrt_marshallIn">d_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId, real_T y[64])
+<FONT COLOR="#888888"><I>   53   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   54   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_h_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_h_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">h_emlrt_marshallIn</FONT></A>(emlrtAlias(u), parentId, y);
+<FONT COLOR="#888888"><I>   55   </I></FONT>    emlrtDestroyArray(&amp;u);
+<FONT COLOR="#888888"><I>   56   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   57   </I></FONT>
+<FONT COLOR="#888888"><I>   58   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A NAME="fcn_e_emlrt_marshallIn">e_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *p, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier)
+<FONT COLOR="#888888"><I>   59   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   60   </I></FONT>    real_T y;
+<FONT COLOR="#888888"><I>   61   </I></FONT>    emlrtMsgIdentifier thisId;
+<FONT COLOR="#888888"><I>   62   </I></FONT>    thisId.fIdentifier = identifier;
+<FONT COLOR="#888888"><I>   63   </I></FONT>    thisId.fParent = NULL;
+<FONT COLOR="#888888"><I>   64   </I></FONT>    y = <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_f_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_f_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrt_marshallIn</FONT></A>(emlrtAlias(p), &amp;thisId);
+<FONT COLOR="#888888"><I>   65   </I></FONT>    emlrtDestroyArray(&amp;p);
+<FONT COLOR="#888888"><I>   66   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> y;
+<FONT COLOR="#888888"><I>   67   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   68   </I></FONT>
+<FONT COLOR="#888888"><I>   69   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_emlrt_marshallIn">emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *D1, <FONT COLOR="#112266"><B>const</B></FONT> char_T *identifier, real_T y[64])
+<FONT COLOR="#888888"><I>   70   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   71   </I></FONT>    emlrtMsgIdentifier thisId;
+<FONT COLOR="#888888"><I>   72   </I></FONT>    thisId.fIdentifier = identifier;
+<FONT COLOR="#888888"><I>   73   </I></FONT>    thisId.fParent = NULL;
+<FONT COLOR="#888888"><I>   74   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_b_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrt_marshallIn</FONT></A>(emlrtAlias(D1), &amp;thisId, y);
+<FONT COLOR="#888888"><I>   75   </I></FONT>    emlrtDestroyArray(&amp;D1);
+<FONT COLOR="#888888"><I>   76   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   77   </I></FONT>
+<FONT COLOR="#888888"><I>   78   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> mxArray *<A NAME="fcn_emlrt_marshallOut">emlrt_marshallOut</A>(real_T u_data[64], int32_T u_sizes[1])
+<FONT COLOR="#888888"><I>   79   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   80   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *y;
+<FONT COLOR="#888888"><I>   81   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *m0;
+<FONT COLOR="#888888"><I>   82   </I></FONT>    real_T (*pData)[];
+<FONT COLOR="#888888"><I>   83   </I></FONT>    int32_T i2;
+<FONT COLOR="#888888"><I>   84   </I></FONT>    int32_T i;
+<FONT COLOR="#888888"><I>   85   </I></FONT>    y = NULL;
+<FONT COLOR="#888888"><I>   86   </I></FONT>    m0 = mxCreateNumericArray(1, (int32_T *)u_sizes, mxDOUBLE_CLASS, mxREAL);
+<FONT COLOR="#888888"><I>   87   </I></FONT>    pData = (real_T (*)[])mxGetPr(m0);
+<FONT COLOR="#888888"><I>   88   </I></FONT>    i2 = 0;
+<FONT COLOR="#888888"><I>   89   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i = 0; i &lt; u_sizes[0]; i++) <B>{</B>
+<FONT COLOR="#888888"><I>   90   </I></FONT>        (*pData)[i2] = u_data[i];
+<FONT COLOR="#888888"><I>   91   </I></FONT>        i2++;
+<FONT COLOR="#888888"><I>   92   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>   93   </I></FONT>    emlrtAssign(&amp;y, m0);
+<FONT COLOR="#888888"><I>   94   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> y;
+<FONT COLOR="#888888"><I>   95   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   96   </I></FONT>
+<FONT COLOR="#888888"><I>   97   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A NAME="fcn_f_emlrt_marshallIn">f_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *u, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *parentId)
+<FONT COLOR="#888888"><I>   98   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   99   </I></FONT>    real_T y;
+<FONT COLOR="#888888"><I>  100   </I></FONT>    y = <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_i_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_i_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">i_emlrt_marshallIn</FONT></A>(emlrtAlias(u), parentId);
+<FONT COLOR="#888888"><I>  101   </I></FONT>    emlrtDestroyArray(&amp;u);
+<FONT COLOR="#888888"><I>  102   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> y;
+<FONT COLOR="#888888"><I>  103   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  104   </I></FONT>
+<FONT COLOR="#888888"><I>  105   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_g_emlrt_marshallIn">g_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId, real_T ret[64])
+<FONT COLOR="#888888"><I>  106   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>  107   </I></FONT>    int32_T i;
+<FONT COLOR="#888888"><I>  108   </I></FONT>    int32_T iv0[2];
+<FONT COLOR="#888888"><I>  109   </I></FONT>    int32_T i3;
+<FONT COLOR="#888888"><I>  110   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i = 0; i &lt; 2; i++) <B>{</B>
+<FONT COLOR="#888888"><I>  111   </I></FONT>        iv0[i] = 8;
+<FONT COLOR="#888888"><I>  112   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  113   </I></FONT>    emlrtCheckBuiltInR2011a(msgId, src, <FONT COLOR="#1122ff">&quot;double&quot;</FONT>, FALSE, 2U, iv0);
+<FONT COLOR="#888888"><I>  114   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i = 0; i &lt; 8; i++) <B>{</B>
+<FONT COLOR="#888888"><I>  115   </I></FONT>        <FONT COLOR="#112266"><B>for</B></FONT> (i3 = 0; i3 &lt; 8; i3++) <B>{</B>
+<FONT COLOR="#888888"><I>  116   </I></FONT>            ret[i3 + (i &lt;&lt; 3)] = (*(real_T (*)[64])mxGetData(src))[i3 + (i &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>  117   </I></FONT>        <B>}</B>
+<FONT COLOR="#888888"><I>  118   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  119   </I></FONT>    emlrtDestroyArray(&amp;src);
+<FONT COLOR="#888888"><I>  120   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  121   </I></FONT>
+<FONT COLOR="#888888"><I>  122   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_h_emlrt_marshallIn">h_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId, real_T ret[64])
+<FONT COLOR="#888888"><I>  123   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>  124   </I></FONT>    int32_T i4;
+<FONT COLOR="#888888"><I>  125   </I></FONT>    int32_T iv1[2];
+<FONT COLOR="#888888"><I>  126   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i4 = 0; i4 &lt; 2; i4++) <B>{</B>
+<FONT COLOR="#888888"><I>  127   </I></FONT>        iv1[i4] = 1 + 63 * i4;
+<FONT COLOR="#888888"><I>  128   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  129   </I></FONT>    emlrtCheckBuiltInR2011a(msgId, src, <FONT COLOR="#1122ff">&quot;double&quot;</FONT>, FALSE, 2U, iv1);
+<FONT COLOR="#888888"><I>  130   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i4 = 0; i4 &lt; 64; i4++) <B>{</B>
+<FONT COLOR="#888888"><I>  131   </I></FONT>        ret[i4] = (*(real_T (*)[64])mxGetData(src))[i4];
+<FONT COLOR="#888888"><I>  132   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  133   </I></FONT>    emlrtDestroyArray(&amp;src);
+<FONT COLOR="#888888"><I>  134   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  135   </I></FONT>
+<FONT COLOR="#888888"><I>  136   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A NAME="fcn_i_emlrt_marshallIn">i_emlrt_marshallIn</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *src, <FONT COLOR="#112266"><B>const</B></FONT> emlrtMsgIdentifier *msgId)
+<FONT COLOR="#888888"><I>  137   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>  138   </I></FONT>    real_T ret;
+<FONT COLOR="#888888"><I>  139   </I></FONT>    emlrtCheckBuiltInR2011a(msgId, src, <FONT COLOR="#1122ff">&quot;double&quot;</FONT>, FALSE, 0U, 0);
+<FONT COLOR="#888888"><I>  140   </I></FONT>    ret = *(real_T *)mxGetData(src);
+<FONT COLOR="#888888"><I>  141   </I></FONT>    emlrtDestroyArray(&amp;src);
+<FONT COLOR="#888888"><I>  142   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> ret;
+<FONT COLOR="#888888"><I>  143   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  144   </I></FONT>
+<FONT COLOR="#888888"><I>  145   </I></FONT><FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_Calc_CrossCorr_8_api">Calc_CrossCorr_8_api</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray * <FONT COLOR="#112266"><B>const</B></FONT> prhs[6], <FONT COLOR="#112266"><B>const</B></FONT> mxArray *plhs[1])
+<FONT COLOR="#888888"><I>  146   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>  147   </I></FONT>    real_T D1[64];
+<FONT COLOR="#888888"><I>  148   </I></FONT>    real_T D2[64];
+<FONT COLOR="#888888"><I>  149   </I></FONT>    real_T i1[64];
+<FONT COLOR="#888888"><I>  150   </I></FONT>    real_T i2[64];
+<FONT COLOR="#888888"><I>  151   </I></FONT>    real_T p;
+<FONT COLOR="#888888"><I>  152   </I></FONT>    real_T Mask[64];
+<FONT COLOR="#888888"><I>  153   </I></FONT>    int32_T b_sizes;
+<FONT COLOR="#888888"><I>  154   </I></FONT>    real_T b_data[64];
+<FONT COLOR="#888888"><I>  155   </I></FONT>    <FONT COLOR="#117755"><I>/* Marshall function inputs */</I></FONT>
+<FONT COLOR="#888888"><I>  156   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[0]), <FONT COLOR="#1122ff">&quot;D1&quot;</FONT>, D1);
+<FONT COLOR="#888888"><I>  157   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[1]), <FONT COLOR="#1122ff">&quot;D2&quot;</FONT>, D2);
+<FONT COLOR="#888888"><I>  158   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_c_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[2]), <FONT COLOR="#1122ff">&quot;i1&quot;</FONT>, i1);
+<FONT COLOR="#888888"><I>  159   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_c_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_c_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[3]), <FONT COLOR="#1122ff">&quot;i2&quot;</FONT>, i2);
+<FONT COLOR="#888888"><I>  160   </I></FONT>    p = <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_e_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_e_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[4]), <FONT COLOR="#1122ff">&quot;p&quot;</FONT>);
+<FONT COLOR="#888888"><I>  161   </I></FONT>    <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallIn" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallIn');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallIn</FONT></A>(emlrtAliasP(prhs[5]), <FONT COLOR="#1122ff">&quot;Mask&quot;</FONT>, Mask);
+<FONT COLOR="#888888"><I>  162   </I></FONT>    <FONT COLOR="#117755"><I>/* Invoke the target function */</I></FONT>
+<FONT COLOR="#888888"><I>  163   </I></FONT>    <A HREF="Calc_CrossCorr_8_cpp.html#fcn_Calc_CrossCorr_8" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr_8');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr_8</FONT></A>(D1, D2, i1, i2, p, Mask, b_data, &amp;b_sizes);
+<FONT COLOR="#888888"><I>  164   </I></FONT>    <FONT COLOR="#117755"><I>/* Marshall function outputs */</I></FONT>
+<FONT COLOR="#888888"><I>  165   </I></FONT>    plhs[0] = <A HREF="Calc_CrossCorr_8_api_cpp.html#fcn_emlrt_marshallOut" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_emlrt_marshallOut');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrt_marshallOut</FONT></A>(b_data, *(int32_T (*)[1])&amp;b_sizes);
+<FONT COLOR="#888888"><I>  166   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  167   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (Calc_CrossCorr_8_api.cpp) */</I></FONT>
+<FONT COLOR="#888888"><I>  168   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

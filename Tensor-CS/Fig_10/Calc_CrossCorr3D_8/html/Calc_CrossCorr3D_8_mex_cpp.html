@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Calc_CrossCorr3D_8_mex.cpp </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_CrossCorr3D_8/Calc_CrossCorr3D_8_mex.cpp" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_CrossCorr3D_8/Calc_CrossCorr3D_8_mex.cpp</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * Calc_CrossCorr3D_8_mex.cpp</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'Calc_CrossCorr3D_8'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Mon Oct 22 16:05:11 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;mex.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr3D_8_api.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr3D_8_initialize.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr3D_8_terminate.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_CrossCorr3D_8_mex_cpp.html#fcn_Calc_CrossCorr3D_8_mexFunction" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_mexFunction');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_mexFunction</FONT></A>(<FONT COLOR="#112266"><B>int</B></FONT> nlhs, mxArray *plhs[], <FONT COLOR="#112266"><B>int</B></FONT> nrhs, <FONT COLOR="#112266"><B>const</B></FONT> mxArray *prhs[]);
+<FONT COLOR="#888888"><I>   20   </I></FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   22   </I></FONT>emlrtContext <A NAME="var_emlrtContextGlobal">emlrtContextGlobal</A> = <B>{</B> true, false, EMLRT_VERSION_INFO, NULL, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr3D_8&quot;</FONT>, NULL, false, NULL <B>}</B>;
+<FONT COLOR="#888888"><I>   23   </I></FONT>
+<FONT COLOR="#888888"><I>   24   </I></FONT><FONT COLOR="#117755"><I>/* Function Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_Calc_CrossCorr3D_8_mexFunction">Calc_CrossCorr3D_8_mexFunction</A>(<FONT COLOR="#112266"><B>int</B></FONT> nlhs, mxArray *plhs[], <FONT COLOR="#112266"><B>int</B></FONT> nrhs, <FONT COLOR="#112266"><B>const</B></FONT> mxArray *prhs[])
+<FONT COLOR="#888888"><I>   26   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   27   </I></FONT>  <FONT COLOR="#117755"><I>/* Temporary copy for mex outputs. */</I></FONT>
+<FONT COLOR="#888888"><I>   28   </I></FONT>  mxArray *outputs[1];
+<FONT COLOR="#888888"><I>   29   </I></FONT>  <FONT COLOR="#112266"><B>int</B></FONT> n = 0;
+<FONT COLOR="#888888"><I>   30   </I></FONT>  <FONT COLOR="#112266"><B>int</B></FONT> nOutputs = (nlhs &lt; 1 ? 1 : nlhs);
+<FONT COLOR="#888888"><I>   31   </I></FONT>  <FONT COLOR="#117755"><I>/* Check for proper number of arguments. */</I></FONT>
+<FONT COLOR="#888888"><I>   32   </I></FONT>  <FONT COLOR="#112266"><B>if</B></FONT>(nrhs != 8) <B>{</B>
+<FONT COLOR="#888888"><I>   33   </I></FONT>    mexErrMsgIdAndTxt(<FONT COLOR="#1122ff">&quot;emlcoder:emlmex:WrongNumberOfInputs&quot;</FONT>,<FONT COLOR="#1122ff">&quot;8 inputs required for entry-point 'Calc_CrossCorr3D_8'.&quot;</FONT>);
+<FONT COLOR="#888888"><I>   34   </I></FONT>  <B>}</B> <FONT COLOR="#112266"><B>else</B></FONT> <FONT COLOR="#112266"><B>if</B></FONT>(nlhs &gt; 1) <B>{</B>
+<FONT COLOR="#888888"><I>   35   </I></FONT>    mexErrMsgIdAndTxt(<FONT COLOR="#1122ff">&quot;emlcoder:emlmex:TooManyOutputArguments&quot;</FONT>,<FONT COLOR="#1122ff">&quot;Too many output arguments for entry-point 'Calc_CrossCorr3D_8'.&quot;</FONT>);
+<FONT COLOR="#888888"><I>   36   </I></FONT>  <B>}</B>
+<FONT COLOR="#888888"><I>   37   </I></FONT>  <FONT COLOR="#117755"><I>/* Module initialization. */</I></FONT>
+<FONT COLOR="#888888"><I>   38   </I></FONT>  <A HREF="Calc_CrossCorr3D_8_initialize_cpp.html#fcn_Calc_CrossCorr3D_8_initialize" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_initialize');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_initialize</FONT></A>(&amp;<A HREF="Calc_CrossCorr3D_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>   39   </I></FONT>  <FONT COLOR="#117755"><I>/* Call the function. */</I></FONT>
+<FONT COLOR="#888888"><I>   40   </I></FONT>  <A HREF="Calc_CrossCorr3D_8_api_cpp.html#fcn_Calc_CrossCorr3D_8_api" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_api');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_api</FONT></A>(prhs,(<FONT COLOR="#112266"><B>const</B></FONT> mxArray**)outputs);
+<FONT COLOR="#888888"><I>   41   </I></FONT>  <FONT COLOR="#117755"><I>/* Copy over outputs to the caller. */</I></FONT>
+<FONT COLOR="#888888"><I>   42   </I></FONT>  <FONT COLOR="#112266"><B>for</B></FONT> (n = 0; n &lt; nOutputs; ++n) <B>{</B>
+<FONT COLOR="#888888"><I>   43   </I></FONT>    plhs[n] = emlrtReturnArrayR2009a(outputs[n]);
+<FONT COLOR="#888888"><I>   44   </I></FONT>  <B>}</B>
+<FONT COLOR="#888888"><I>   45   </I></FONT>  <FONT COLOR="#117755"><I>/* Module finalization. */</I></FONT>
+<FONT COLOR="#888888"><I>   46   </I></FONT>  <A HREF="Calc_CrossCorr3D_8_terminate_cpp.html#fcn_Calc_CrossCorr3D_8_terminate" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_terminate');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_terminate</FONT></A>();
+<FONT COLOR="#888888"><I>   47   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   48   </I></FONT><FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_mexFunction">mexFunction</A>(<FONT COLOR="#112266"><B>int</B></FONT> nlhs, mxArray *plhs[], <FONT COLOR="#112266"><B>int</B></FONT> nrhs, <FONT COLOR="#112266"><B>const</B></FONT> mxArray *prhs[])
+<FONT COLOR="#888888"><I>   49   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   50   </I></FONT>  <FONT COLOR="#117755"><I>/* Initialize the memory manager. */</I></FONT>
+<FONT COLOR="#888888"><I>   51   </I></FONT>  mexAtExit(<A HREF="Calc_CrossCorr3D_8_terminate_cpp.html#fcn_Calc_CrossCorr3D_8_atexit" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_atexit');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_atexit</FONT></A>);
+<FONT COLOR="#888888"><I>   52   </I></FONT>  emlrtClearAllocCount(&amp;<A HREF="Calc_CrossCorr3D_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>, 0, 0, NULL);
+<FONT COLOR="#888888"><I>   53   </I></FONT>  <FONT COLOR="#117755"><I>/* Dispatch the entry-point. */</I></FONT>
+<FONT COLOR="#888888"><I>   54   </I></FONT>  <A HREF="Calc_CrossCorr3D_8_mex_cpp.html#fcn_Calc_CrossCorr3D_8_mexFunction" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_Calc_CrossCorr3D_8_mexFunction');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">Calc_CrossCorr3D_8_mexFunction</FONT></A>(nlhs, plhs, nrhs, prhs);
+<FONT COLOR="#888888"><I>   55   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   56   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (Calc_CrossCorr3D_8_mex.cpp) */</I></FONT>
+<FONT COLOR="#888888"><I>   57   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

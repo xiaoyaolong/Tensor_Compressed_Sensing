@@ -1,0 +1,20 @@
+# Make settings for Calc_CrossCorr_8
+CC=gcc-4.2
+CFLAGS=-fno-common -no-cpp-precomp -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5  -fexceptions
+CLIBS=-L/Applications/MATLAB_R2011a.app/bin/maci64 -lmx -lmex -lmat -lstdc++
+COPTIMFLAGS=-O2 -DNDEBUG
+CDEBUGFLAGS=-g
+CXX=g++-4.2
+CXXFLAGS=-fno-common -no-cpp-precomp -fexceptions -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5
+CXXLIBS=-L/Applications/MATLAB_R2011a.app/bin/maci64 -lmx -lmex -lmat -lstdc++
+CXXOPTIMFLAGS=-O2 -DNDEBUG
+CXXDEBUGFLAGS=-g
+LD=gcc-4.2
+LDFLAGS=-Wl,-twolevel_namespace -undefined error -arch x86_64 -Wl,-syslibroot,/Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.5 -bundle -Wl,-exported_symbols_list,/Applications/MATLAB_R2011a.app/extern/lib/maci64/mexFunction.map
+LDOPTIMFLAGS=-O
+LDDEBUGFLAGS=-g
+Arch=maci64
+OMPFLAGS=
+OMPLINKFLAGS=
+EMC_COMPILER=unix
+EMC_CONFIG=debug

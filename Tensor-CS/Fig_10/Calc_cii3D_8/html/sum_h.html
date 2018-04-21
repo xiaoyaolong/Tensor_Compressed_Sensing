@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - sum.h </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_cii3D_8/sum.h" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_cii3D_8/sum.h</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * sum.h</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'sum'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Tue Oct 23 11:31:45 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>ifndef</B></FONT> __SUM_H__
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>define</B></FONT> __SUM_H__
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&lt;math.h&gt;</FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&lt;stdlib.h&gt;</FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&lt;string.h&gt;</FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;mwmathutil.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;tmwtypes.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;mex.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   20   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;emlrt.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;blascompat32.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   22   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;rtwtypes.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   23   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_cii3D_8_types.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   24   </I></FONT>
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   26   </I></FONT>
+<FONT COLOR="#888888"><I>   27   </I></FONT><FONT COLOR="#117755"><I>/* Named Constants */</I></FONT>
+<FONT COLOR="#888888"><I>   28   </I></FONT>
+<FONT COLOR="#888888"><I>   29   </I></FONT><FONT COLOR="#117755"><I>/* Variable Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   30   </I></FONT>
+<FONT COLOR="#888888"><I>   31   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   32   </I></FONT>
+<FONT COLOR="#888888"><I>   33   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   34   </I></FONT><FONT COLOR="#112266"><B>extern</B></FONT> real_T <A HREF="sum_cpp.html#fcn_sum" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_sum');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">sum</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> real_T x[512]);
+<FONT COLOR="#888888"><I>   35   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>ifdef</B></FONT> __WATCOMC__
+<FONT COLOR="#888888"><I>   36   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>pragma</B></FONT> aux <A HREF="sum_cpp.html#fcn_sum" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_sum');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">sum</FONT></A> <A NAME="var_value">value</A> [8087];
+<FONT COLOR="#888888"><I>   37   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>endif</B></FONT>
+<FONT COLOR="#888888"><I>   38   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>endif</B></FONT>
+<FONT COLOR="#888888"><I>   39   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (sum.h) */</I></FONT>
+<FONT COLOR="#888888"><I>   40   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

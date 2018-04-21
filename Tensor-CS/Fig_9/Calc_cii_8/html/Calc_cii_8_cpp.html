@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Calc_cii_8.cpp </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_cii_8/Calc_cii_8.cpp" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_cii_8/Calc_cii_8.cpp</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * Calc_cii_8.cpp</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'Calc_cii_8'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Wed Oct 17 12:40:49 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;rt_nonfinite.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_cii_8.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT><FONT COLOR="#117755"><I>/* Named Constants */</I></FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT><FONT COLOR="#117755"><I>/* Variable Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT>
+<FONT COLOR="#888888"><I>   20   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_emlrtRSI">emlrtRSI</A> = <B>{</B> 14, <FONT COLOR="#1122ff">&quot;Calc_cii_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_cii_8.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   22   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_d_emlrtRSI">d_emlrtRSI</A> = <B>{</B> 14, <FONT COLOR="#1122ff">&quot;sqrt&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Applications/MATLAB_R2011a.app/toolbox/eml/lib/matlab/elfun/sqrt.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   23   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_e_emlrtRSI">e_emlrtRSI</A> = <B>{</B> 15, <FONT COLOR="#1122ff">&quot;eml_error&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Applications/MATLAB_R2011a.app/toolbox/eml/lib/matlab/eml/eml_error.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   24   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_f_emlrtRSI">f_emlrtRSI</A> = <B>{</B> 19, <FONT COLOR="#1122ff">&quot;sub2ind&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Applications/MATLAB_R2011a.app/toolbox/eml/lib/matlab/elmat/sub2ind.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtMCInfo <A NAME="var_c_emlrtMCI">c_emlrtMCI</A> = <B>{</B> 15, 19, <FONT COLOR="#1122ff">&quot;eml_error&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Applications/MATLAB_R2011a.app/toolbox/eml/lib/matlab/eml/eml_error.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   26   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtMCInfo <A NAME="var_d_emlrtMCI">d_emlrtMCI</A> = <B>{</B> 15, 5, <FONT COLOR="#1122ff">&quot;eml_error&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Applications/MATLAB_R2011a.app/toolbox/eml/lib/matlab/eml/eml_error.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   27   </I></FONT>
+<FONT COLOR="#888888"><I>   28   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   29   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_cii_8_cpp.html#fcn_eml_error" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_eml_error');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">eml_error</FONT></A>(<FONT COLOR="#112266"><B>void</B></FONT>);
+<FONT COLOR="#888888"><I>   30   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A HREF="Calc_cii_8_cpp.html#fcn_error" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_error');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">error</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *b, emlrtMCInfo *location);
+<FONT COLOR="#888888"><I>   31   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> mxArray *<A HREF="Calc_cii_8_cpp.html#fcn_message" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_message');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">message</FONT></A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *b, emlrtMCInfo *location);
+<FONT COLOR="#888888"><I>   32   </I></FONT>
+<FONT COLOR="#888888"><I>   33   </I></FONT><FONT COLOR="#117755"><I>/* Function Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   34   </I></FONT>
+<FONT COLOR="#888888"><I>   35   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>   36   </I></FONT><FONT COLOR="#117755"><I> * </I></FONT>
+<FONT COLOR="#888888"><I>   37   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>   38   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_eml_error">eml_error</A>(<FONT COLOR="#112266"><B>void</B></FONT>)
+<FONT COLOR="#888888"><I>   39   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   40   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *y;
+<FONT COLOR="#888888"><I>   41   </I></FONT>    <FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> int32_T iv0[2] = <B>{</B> 1, 30 <B>}</B>;
+<FONT COLOR="#888888"><I>   42   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *m0;
+<FONT COLOR="#888888"><I>   43   </I></FONT>    <FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> char_T cv0[30] = <B>{</B> <FONT COLOR="#1122ff">'C'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'d'</FONT>, <FONT COLOR="#1122ff">'e'</FONT>, <FONT COLOR="#1122ff">'r'</FONT>, <FONT COLOR="#1122ff">':'</FONT>, <FONT COLOR="#1122ff">'t'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'l'</FONT>, <FONT COLOR="#1122ff">'b'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'x'</FONT>, <FONT COLOR="#1122ff">':'</FONT>, <FONT COLOR="#1122ff">'s'</FONT>, <FONT COLOR="#1122ff">'q'</FONT>, <FONT COLOR="#1122ff">'r'</FONT>, <FONT COLOR="#1122ff">'t'</FONT>, <FONT COLOR="#1122ff">'_'</FONT>, <FONT COLOR="#1122ff">'d'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'m'</FONT>, <FONT COLOR="#1122ff">'a'</FONT>, <FONT COLOR="#1122ff">'i'</FONT>, <FONT COLOR="#1122ff">'n'</FONT>, <FONT COLOR="#1122ff">'E'</FONT>, <FONT COLOR="#1122ff">'r'</FONT>, <FONT COLOR="#1122ff">'r'</FONT>, <FONT COLOR="#1122ff">'o'</FONT>, <FONT COLOR="#1122ff">'r'</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   44   </I></FONT>    EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_e_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_e_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   45   </I></FONT>    y = NULL;
+<FONT COLOR="#888888"><I>   46   </I></FONT>    m0 = mxCreateCharArray(2, iv0);
+<FONT COLOR="#888888"><I>   47   </I></FONT>    emlrtInitCharArray(30, m0, cv0);
+<FONT COLOR="#888888"><I>   48   </I></FONT>    emlrtAssign(&amp;y, m0);
+<FONT COLOR="#888888"><I>   49   </I></FONT>    <A HREF="Calc_cii_8_cpp.html#fcn_error" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_error');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">error</FONT></A>(<A HREF="Calc_cii_8_cpp.html#fcn_message" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_message');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">message</FONT></A>(y, &amp;<A HREF="Calc_cii_8_cpp.html#var_c_emlrtMCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_c_emlrtMCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrtMCI</FONT></A>), &amp;<A HREF="Calc_cii_8_cpp.html#var_d_emlrtMCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_emlrtMCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrtMCI</FONT></A>);
+<FONT COLOR="#888888"><I>   50   </I></FONT>    EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_e_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_e_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   51   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   52   </I></FONT>
+<FONT COLOR="#888888"><I>   53   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_error">error</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *b, emlrtMCInfo *location)
+<FONT COLOR="#888888"><I>   54   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   55   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *pArray;
+<FONT COLOR="#888888"><I>   56   </I></FONT>    pArray = b;
+<FONT COLOR="#888888"><I>   57   </I></FONT>    emlrtCallMATLAB(0, NULL, 1, &amp;pArray, <FONT COLOR="#1122ff">&quot;error&quot;</FONT>, TRUE, location);
+<FONT COLOR="#888888"><I>   58   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   59   </I></FONT>
+<FONT COLOR="#888888"><I>   60   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> <FONT COLOR="#112266"><B>const</B></FONT> mxArray *<A NAME="fcn_message">message</A>(<FONT COLOR="#112266"><B>const</B></FONT> mxArray *b, emlrtMCInfo *location)
+<FONT COLOR="#888888"><I>   61   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   62   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *pArray;
+<FONT COLOR="#888888"><I>   63   </I></FONT>    <FONT COLOR="#112266"><B>const</B></FONT> mxArray *m2;
+<FONT COLOR="#888888"><I>   64   </I></FONT>    pArray = b;
+<FONT COLOR="#888888"><I>   65   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> emlrtCallMATLAB(1, &amp;m2, 1, &amp;pArray, <FONT COLOR="#1122ff">&quot;message&quot;</FONT>, TRUE, location);
+<FONT COLOR="#888888"><I>   66   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   67   </I></FONT>
+<FONT COLOR="#888888"><I>   68   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>   69   </I></FONT><FONT COLOR="#117755"><I> * function [cii] = Calc_cii_8(D1,D2,Mask)</I></FONT>
+<FONT COLOR="#888888"><I>   70   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>   71   </I></FONT><FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_Calc_cii_8">Calc_cii_8</A>(<FONT COLOR="#112266"><B>const</B></FONT> real_T D1[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T D2[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T Mask[64], real_T cii[64])
+<FONT COLOR="#888888"><I>   72   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   73   </I></FONT>    int32_T j2;
+<FONT COLOR="#888888"><I>   74   </I></FONT>    int32_T b_j1;
+<FONT COLOR="#888888"><I>   75   </I></FONT>    real_T b[8];
+<FONT COLOR="#888888"><I>   76   </I></FONT>    int32_T k;
+<FONT COLOR="#888888"><I>   77   </I></FONT>    int32_T i0;
+<FONT COLOR="#888888"><I>   78   </I></FONT>    real_T b_D1[64];
+<FONT COLOR="#888888"><I>   79   </I></FONT>    real_T c_D1[64];
+<FONT COLOR="#888888"><I>   80   </I></FONT>    real_T y;
+<FONT COLOR="#888888"><I>   81   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii_8:3' I1 = size(D1,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   82   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii_8:4' I2 = size(D2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   83   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii_8:5' cii = zeros(I1*I2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   84   </I></FONT>    memset((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;cii[0], 0, <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 6);
+<FONT COLOR="#888888"><I>   85   </I></FONT>    <FONT COLOR="#117755"><I>/* mask = zeros(I1*I2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   86   </I></FONT>    <FONT COLOR="#117755"><I>/* mask(sub2ind([I1,I2], ind1(1:K)', ind2(1:K)'))=1; */</I></FONT>
+<FONT COLOR="#888888"><I>   87   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii_8:10' for j2=1:I2 */</I></FONT>
+<FONT COLOR="#888888"><I>   88   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (j2 = 0; j2 &lt; 8; j2++) <B>{</B>
+<FONT COLOR="#888888"><I>   89   </I></FONT>        <FONT COLOR="#117755"><I>/* 'Calc_cii_8:11' for j1=1:I1 */</I></FONT>
+<FONT COLOR="#888888"><I>   90   </I></FONT>        <FONT COLOR="#112266"><B>for</B></FONT> (b_j1 = 0; b_j1 &lt; 8; b_j1++) <B>{</B>
+<FONT COLOR="#888888"><I>   91   </I></FONT>            <FONT COLOR="#117755"><I>/* w = kron(D2(:,j2),D1(:,j1)).*mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   92   </I></FONT>            <FONT COLOR="#117755"><I>/* 'Calc_cii_8:13' W = (D1(:,j1)*D2(:,j2)').*Mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   93   </I></FONT>            memcpy((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;b[0], (<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;D2[j2 &lt;&lt; 3], <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 3);
+<FONT COLOR="#888888"><I>   94   </I></FONT>            <FONT COLOR="#117755"><I>/* 'Calc_cii_8:14' cii(sub2ind([I1,I2], j1, j2)) = sqrt(sum(W(:).^2)); */</I></FONT>
+<FONT COLOR="#888888"><I>   95   </I></FONT>            EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   96   </I></FONT>            EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_f_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_f_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   97   </I></FONT>            EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_f_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_f_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   98   </I></FONT>            <FONT COLOR="#112266"><B>for</B></FONT> (k = 0; k &lt; 8; k++) <B>{</B>
+<FONT COLOR="#888888"><I>   99   </I></FONT>                <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>  100   </I></FONT>                    b_D1[i0 + (k &lt;&lt; 3)] = D1[i0 + (b_j1 &lt;&lt; 3)] * b[k];
+<FONT COLOR="#888888"><I>  101   </I></FONT>                    c_D1[i0 + (k &lt;&lt; 3)] = b_D1[i0 + (k &lt;&lt; 3)] * Mask[i0 + (k &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>  102   </I></FONT>                <B>}</B>
+<FONT COLOR="#888888"><I>  103   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>  104   </I></FONT>            <FONT COLOR="#112266"><B>for</B></FONT> (k = 0; k &lt; 64; k++) <B>{</B>
+<FONT COLOR="#888888"><I>  105   </I></FONT>                b_D1[k] = muDoubleScalarPower(c_D1[k], 2.0);
+<FONT COLOR="#888888"><I>  106   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>  107   </I></FONT>            y = b_D1[0];
+<FONT COLOR="#888888"><I>  108   </I></FONT>            <FONT COLOR="#112266"><B>for</B></FONT> (k = 0; k &lt; 63; k++) <B>{</B>
+<FONT COLOR="#888888"><I>  109   </I></FONT>                y += b_D1[k + 1];
+<FONT COLOR="#888888"><I>  110   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>  111   </I></FONT>            <FONT COLOR="#112266"><B>if</B></FONT> (y &lt; 0.0) <B>{</B>
+<FONT COLOR="#888888"><I>  112   </I></FONT>                EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_d_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>  113   </I></FONT>                <A HREF="Calc_cii_8_cpp.html#fcn_eml_error" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_eml_error');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">eml_error</FONT></A>();
+<FONT COLOR="#888888"><I>  114   </I></FONT>                EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_d_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>  115   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>  116   </I></FONT>            cii[b_j1 + (j2 &lt;&lt; 3)] = muDoubleScalarSqrt(y);
+<FONT COLOR="#888888"><I>  117   </I></FONT>            EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii_8_cpp.html#var_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>  118   </I></FONT>            emlrtBreakCheck();
+<FONT COLOR="#888888"><I>  119   </I></FONT>        <B>}</B>
+<FONT COLOR="#888888"><I>  120   </I></FONT>        emlrtBreakCheck();
+<FONT COLOR="#888888"><I>  121   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  122   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  123   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (Calc_cii_8.cpp) */</I></FONT>
+<FONT COLOR="#888888"><I>  124   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

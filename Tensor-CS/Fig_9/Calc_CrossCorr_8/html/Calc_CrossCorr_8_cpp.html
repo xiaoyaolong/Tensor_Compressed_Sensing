@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Calc_CrossCorr_8.cpp </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_CrossCorr_8/Calc_CrossCorr_8.cpp" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/codegen/mex/Calc_CrossCorr_8/Calc_CrossCorr_8.cpp</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * Calc_CrossCorr_8.cpp</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'Calc_CrossCorr_8'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Wed Oct 17 12:43:16 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;rt_nonfinite.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_CrossCorr_8.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT><FONT COLOR="#117755"><I>/* Named Constants */</I></FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT><FONT COLOR="#117755"><I>/* Variable Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT>
+<FONT COLOR="#888888"><I>   20   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_emlrtDCI">emlrtDCI</A> = <B>{</B> 13, 11, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   22   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_emlrtBCI">emlrtBCI</A> = <B>{</B> 1, 8, 13, 11, <FONT COLOR="#1122ff">&quot;D1&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   23   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_b_emlrtDCI">b_emlrtDCI</A> = <B>{</B> 13, 23, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   24   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_b_emlrtBCI">b_emlrtBCI</A> = <B>{</B> 1, 8, 13, 23, <FONT COLOR="#1122ff">&quot;D2&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_c_emlrtDCI">c_emlrtDCI</A> = <B>{</B> 17, 17, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   26   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_c_emlrtBCI">c_emlrtBCI</A> = <B>{</B> 1, 8, 17, 17, <FONT COLOR="#1122ff">&quot;D1&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   27   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_d_emlrtDCI">d_emlrtDCI</A> = <B>{</B> 17, 33, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   28   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_d_emlrtBCI">d_emlrtBCI</A> = <B>{</B> 1, 8, 17, 33, <FONT COLOR="#1122ff">&quot;D2&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   29   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_e_emlrtDCI">e_emlrtDCI</A> = <B>{</B> 20, 5, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   30   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_e_emlrtBCI">e_emlrtBCI</A> = <B>{</B> 1, 64, 20, 5, <FONT COLOR="#1122ff">&quot;b&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   31   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_f_emlrtBCI">f_emlrtBCI</A> = <B>{</B> 1, 64, 13, 11, <FONT COLOR="#1122ff">&quot;i1&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   32   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_f_emlrtDCI">f_emlrtDCI</A> = <B>{</B> 13, 11, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   33   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_g_emlrtBCI">g_emlrtBCI</A> = <B>{</B> 1, 64, 13, 23, <FONT COLOR="#1122ff">&quot;i2&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   34   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtDCInfo <A NAME="var_g_emlrtDCI">g_emlrtDCI</A> = <B>{</B> 13, 23, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 1 <B>}</B>;
+<FONT COLOR="#888888"><I>   35   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_h_emlrtBCI">h_emlrtBCI</A> = <B>{</B> 1, 64, 17, 17, <FONT COLOR="#1122ff">&quot;i1&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   36   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_i_emlrtBCI">i_emlrtBCI</A> = <B>{</B> 1, 64, 17, 33, <FONT COLOR="#1122ff">&quot;i2&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   37   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtBCInfo <A NAME="var_j_emlrtBCI">j_emlrtBCI</A> = <B>{</B> 1, 64, 17, 4, <FONT COLOR="#1122ff">&quot;b&quot;</FONT>, <FONT COLOR="#1122ff">&quot;Calc_CrossCorr_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/2Dcase/Calc_CrossCorr_8.m&quot;</FONT>, 0 <B>}</B>;
+<FONT COLOR="#888888"><I>   38   </I></FONT>
+<FONT COLOR="#888888"><I>   39   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   40   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A HREF="Calc_CrossCorr_8_cpp.html#fcn_ceval_xdot" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_ceval_xdot');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">ceval_xdot</FONT></A>(int32_T n, <FONT COLOR="#112266"><B>const</B></FONT> real_T x[8], int32_T ix0, int32_T incx, <FONT COLOR="#112266"><B>const</B></FONT> real_T y[8], int32_T iy0, int32_T incy);
+<FONT COLOR="#888888"><I>   41   </I></FONT>
+<FONT COLOR="#888888"><I>   42   </I></FONT><FONT COLOR="#117755"><I>/* Function Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   43   </I></FONT>
+<FONT COLOR="#888888"><I>   44   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>   45   </I></FONT><FONT COLOR="#117755"><I> * </I></FONT>
+<FONT COLOR="#888888"><I>   46   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>   47   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> real_T <A NAME="fcn_ceval_xdot">ceval_xdot</A>(int32_T n, <FONT COLOR="#112266"><B>const</B></FONT> real_T x[8], int32_T ix0, int32_T incx, <FONT COLOR="#112266"><B>const</B></FONT> real_T y[8], int32_T iy0, int32_T incy)
+<FONT COLOR="#888888"><I>   48   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   49   </I></FONT>    <FONT COLOR="#112266"><B>return</B></FONT> ddot32(&amp;n, &amp;x[0], &amp;incx, &amp;y[0], &amp;incy);
+<FONT COLOR="#888888"><I>   50   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>   51   </I></FONT>
+<FONT COLOR="#888888"><I>   52   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>   53   </I></FONT><FONT COLOR="#117755"><I> * function [b] = Calc_CrossCorr_8(D1,D2,i1,i2,p,Mask)</I></FONT>
+<FONT COLOR="#888888"><I>   54   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>   55   </I></FONT><FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_Calc_CrossCorr_8">Calc_CrossCorr_8</A>(<FONT COLOR="#112266"><B>const</B></FONT> real_T D1[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T D2[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T i1[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T i2[64], real_T p, <FONT COLOR="#112266"><B>const</B></FONT> real_T Mask[64], real_T b_data[64], int32_T b_sizes[1])
+<FONT COLOR="#888888"><I>   56   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   57   </I></FONT>    real_T b[64];
+<FONT COLOR="#888888"><I>   58   </I></FONT>    int32_T b_i2;
+<FONT COLOR="#888888"><I>   59   </I></FONT>    int32_T b_i1;
+<FONT COLOR="#888888"><I>   60   </I></FONT>    int32_T i0;
+<FONT COLOR="#888888"><I>   61   </I></FONT>    real_T b_b[8];
+<FONT COLOR="#888888"><I>   62   </I></FONT>    int32_T c_i1;
+<FONT COLOR="#888888"><I>   63   </I></FONT>    real_T b_D1[64];
+<FONT COLOR="#888888"><I>   64   </I></FONT>    real_T W[64];
+<FONT COLOR="#888888"><I>   65   </I></FONT>    real_T loop_ub;
+<FONT COLOR="#888888"><I>   66   </I></FONT>    real_T c_b[8];
+<FONT COLOR="#888888"><I>   67   </I></FONT>    <FONT COLOR="#117755"><I>/* p = length(i1); */</I></FONT>
+<FONT COLOR="#888888"><I>   68   </I></FONT>    <FONT COLOR="#117755"><I>/* b = zeros(p-1,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   69   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_CrossCorr_8:5' b = zeros(64,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   70   </I></FONT>    memset((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;b[0], 0, <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 6);
+<FONT COLOR="#888888"><I>   71   </I></FONT>    <FONT COLOR="#117755"><I>/* I1 = size(D1,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   72   </I></FONT>    <FONT COLOR="#117755"><I>/* I2 = size(D2,2); */</I></FONT>
+<FONT COLOR="#888888"><I>   73   </I></FONT>    <FONT COLOR="#117755"><I>/* mask = zeros(I1*I2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   74   </I></FONT>    <FONT COLOR="#117755"><I>/* mask(sub2ind([I1,I2], ind1(1:K)', ind2(1:K)'))=1; */</I></FONT>
+<FONT COLOR="#888888"><I>   75   </I></FONT>    <FONT COLOR="#117755"><I>/* w = kron(D2(:,i2(p)),D1(:,i1(p))).*mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   76   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_CrossCorr_8:13' W = (D1(:,i1(p))*D2(:,i2(p))').*Mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   77   </I></FONT>    emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(i1[emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(p, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_f_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_f_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_f_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_f_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">f_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>) - 1], &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>   78   </I></FONT>    b_i2 = emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(i2[emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(p, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_g_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_g_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">g_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_g_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_g_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">g_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>) - 1], &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_b_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_b_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_b_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_b_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>   79   </I></FONT>    b_i1 = (int32_T)i1[(int32_T)p - 1];
+<FONT COLOR="#888888"><I>   80   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   81   </I></FONT>        b_b[i0] = D2[i0 + ((b_i2 - 1) &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>   82   </I></FONT>        <FONT COLOR="#112266"><B>for</B></FONT> (c_i1 = 0; c_i1 &lt; 8; c_i1++) <B>{</B>
+<FONT COLOR="#888888"><I>   83   </I></FONT>            b_D1[c_i1 + (i0 &lt;&lt; 3)] = D1[c_i1 + ((b_i1 - 1) &lt;&lt; 3)] * b_b[i0];
+<FONT COLOR="#888888"><I>   84   </I></FONT>            W[c_i1 + (i0 &lt;&lt; 3)] = b_D1[c_i1 + (i0 &lt;&lt; 3)] * Mask[c_i1 + (i0 &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>   85   </I></FONT>        <B>}</B>
+<FONT COLOR="#888888"><I>   86   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>   87   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_CrossCorr_8:15' for p1=1:p-1 */</I></FONT>
+<FONT COLOR="#888888"><I>   88   </I></FONT>    loop_ub = p - 1.0;
+<FONT COLOR="#888888"><I>   89   </I></FONT>    b_i2 = 1;
+<FONT COLOR="#888888"><I>   90   </I></FONT>    <FONT COLOR="#112266"><B>while</B></FONT> ((real_T)b_i2 &lt;= loop_ub) <B>{</B>
+<FONT COLOR="#888888"><I>   91   </I></FONT>        <FONT COLOR="#117755"><I>/* b(p1) = kron(D2(:,i2(p1))',D1(:,i1(p1))')*w; */</I></FONT>
+<FONT COLOR="#888888"><I>   92   </I></FONT>        <FONT COLOR="#117755"><I>/* 'Calc_CrossCorr_8:17' b(p1) = D1(:,i1(p1))'*W*D2(:,i2(p1)); */</I></FONT>
+<FONT COLOR="#888888"><I>   93   </I></FONT>        b_i1 = emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(i1[emlrtBoundsCheckR2011a(b_i2, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_h_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_h_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">h_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>) - 1], &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_c_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_c_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_c_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_c_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">c_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>   94   </I></FONT>        memcpy((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;b_b[0], (<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;D1[(b_i1 - 1) &lt;&lt; 3], <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 3);
+<FONT COLOR="#888888"><I>   95   </I></FONT>        emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(i2[emlrtBoundsCheckR2011a(b_i2, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_i_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_i_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">i_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>) - 1], &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_d_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_d_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_d_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">d_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>   96   </I></FONT>        <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   97   </I></FONT>            c_b[i0] = 0.0;
+<FONT COLOR="#888888"><I>   98   </I></FONT>            <FONT COLOR="#112266"><B>for</B></FONT> (c_i1 = 0; c_i1 &lt; 8; c_i1++) <B>{</B>
+<FONT COLOR="#888888"><I>   99   </I></FONT>                c_b[i0] += b_b[c_i1] * W[c_i1 + (i0 &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>  100   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>  101   </I></FONT>        <B>}</B>
+<FONT COLOR="#888888"><I>  102   </I></FONT>        b[emlrtBoundsCheckR2011a(b_i2, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_j_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_j_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">j_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>) - 1] = <A HREF="Calc_CrossCorr_8_cpp.html#fcn_ceval_xdot" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_ceval_xdot');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">ceval_xdot</FONT></A>(8, c_b, 1, 1, *(real_T (*)[8])&amp;D2[((int32_T)i2[b_i2 - 1] - 1) &lt;&lt; 3], 1, 1);
+<FONT COLOR="#888888"><I>  103   </I></FONT>        b_i2++;
+<FONT COLOR="#888888"><I>  104   </I></FONT>        emlrtBreakCheck();
+<FONT COLOR="#888888"><I>  105   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  106   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_CrossCorr_8:20' b = b(1:p-1); */</I></FONT>
+<FONT COLOR="#888888"><I>  107   </I></FONT>    loop_ub = p - 1.0;
+<FONT COLOR="#888888"><I>  108   </I></FONT>    <FONT COLOR="#112266"><B>if</B></FONT> (1.0 &gt; loop_ub) <B>{</B>
+<FONT COLOR="#888888"><I>  109   </I></FONT>        i0 = 0;
+<FONT COLOR="#888888"><I>  110   </I></FONT>    <B>}</B> <FONT COLOR="#112266"><B>else</B></FONT> <B>{</B>
+<FONT COLOR="#888888"><I>  111   </I></FONT>        i0 = emlrtBoundsCheckR2011a((int32_T)emlrtIntegerCheckR2011a(loop_ub, &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_e_emlrtDCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_e_emlrtDCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrtDCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>), &amp;<A HREF="Calc_CrossCorr_8_cpp.html#var_e_emlrtBCI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_e_emlrtBCI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">e_emlrtBCI</FONT></A>, &amp;<A HREF="Calc_CrossCorr_8_mex_cpp.html#var_emlrtContextGlobal" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtContextGlobal');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtContextGlobal</FONT></A>);
+<FONT COLOR="#888888"><I>  112   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  113   </I></FONT>    b_sizes[0] = i0;
+<FONT COLOR="#888888"><I>  114   </I></FONT>    b_i2 = i0 - 1;
+<FONT COLOR="#888888"><I>  115   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt;= b_i2; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>  116   </I></FONT>        b_data[i0] = b[i0];
+<FONT COLOR="#888888"><I>  117   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>  118   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  119   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (Calc_CrossCorr_8.cpp) */</I></FONT>
+<FONT COLOR="#888888"><I>  120   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

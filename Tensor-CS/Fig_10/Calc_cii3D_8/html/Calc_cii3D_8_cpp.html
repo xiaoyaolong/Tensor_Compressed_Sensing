@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Calc_cii3D_8.cpp </TITLE>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);}">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_cii3D_8/Calc_cii3D_8.cpp" TARGET="rtwreport_document_frame">/Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/codegen/mex/Calc_cii3D_8/Calc_cii3D_8.cpp</A></H4>
+<PRE id="RTWcode">
+<FONT COLOR="#888888"><I>    1   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>    2   </I></FONT><FONT COLOR="#117755"><I> * Calc_cii3D_8.cpp</I></FONT>
+<FONT COLOR="#888888"><I>    3   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    4   </I></FONT><FONT COLOR="#117755"><I> * Code generation for function 'Calc_cii3D_8'</I></FONT>
+<FONT COLOR="#888888"><I>    5   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    6   </I></FONT><FONT COLOR="#117755"><I> * C source code generated on: Tue Oct 23 11:31:45 2012</I></FONT>
+<FONT COLOR="#888888"><I>    7   </I></FONT><FONT COLOR="#117755"><I> *</I></FONT>
+<FONT COLOR="#888888"><I>    8   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>    9   </I></FONT>
+<FONT COLOR="#888888"><I>   10   </I></FONT><FONT COLOR="#117755"><I>/* Include files */</I></FONT>
+<FONT COLOR="#888888"><I>   11   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;rt_nonfinite.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   12   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;Calc_cii3D_8.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   13   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;sqrt.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   14   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;sum.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   15   </I></FONT><FONT COLOR="#992211">#</FONT><FONT COLOR="#992211"><B>include</B></FONT> <FONT COLOR="#992211">&quot;power.h&quot;</FONT>
+<FONT COLOR="#888888"><I>   16   </I></FONT>
+<FONT COLOR="#888888"><I>   17   </I></FONT><FONT COLOR="#117755"><I>/* Type Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   18   </I></FONT>
+<FONT COLOR="#888888"><I>   19   </I></FONT><FONT COLOR="#117755"><I>/* Named Constants */</I></FONT>
+<FONT COLOR="#888888"><I>   20   </I></FONT>
+<FONT COLOR="#888888"><I>   21   </I></FONT><FONT COLOR="#117755"><I>/* Variable Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   22   </I></FONT>
+<FONT COLOR="#888888"><I>   23   </I></FONT><FONT COLOR="#117755"><I>/* Variable Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   24   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_emlrtRSI">emlrtRSI</A> = <B>{</B> 22, <FONT COLOR="#1122ff">&quot;Calc_cii3D_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/Calc_cii3D_8.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   25   </I></FONT><FONT COLOR="#112266"><B>static</B></FONT> emlrtRSInfo <A NAME="var_b_emlrtRSI">b_emlrtRSI</A> = <B>{</B> 26, <FONT COLOR="#1122ff">&quot;Calc_cii3D_8&quot;</FONT>, <FONT COLOR="#1122ff">&quot;/Users/ccaiafa/Dropbox/Kronecker Inpainting/Test3D/Calc_cii3D_8.m&quot;</FONT> <B>}</B>;
+<FONT COLOR="#888888"><I>   26   </I></FONT>
+<FONT COLOR="#888888"><I>   27   </I></FONT><FONT COLOR="#117755"><I>/* Function Declarations */</I></FONT>
+<FONT COLOR="#888888"><I>   28   </I></FONT>
+<FONT COLOR="#888888"><I>   29   </I></FONT><FONT COLOR="#117755"><I>/* Function Definitions */</I></FONT>
+<FONT COLOR="#888888"><I>   30   </I></FONT>
+<FONT COLOR="#888888"><I>   31   </I></FONT><FONT COLOR="#117755"><I>/*</I></FONT>
+<FONT COLOR="#888888"><I>   32   </I></FONT><FONT COLOR="#117755"><I> * function [cii] = Calc_cii3D_8(D1,D2,D3,Mask)</I></FONT>
+<FONT COLOR="#888888"><I>   33   </I></FONT><FONT COLOR="#117755"><I> */</I></FONT>
+<FONT COLOR="#888888"><I>   34   </I></FONT><FONT COLOR="#112266"><B>void</B></FONT> <A NAME="fcn_Calc_cii3D_8">Calc_cii3D_8</A>(<FONT COLOR="#112266"><B>const</B></FONT> real_T D1[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T D2[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T D3[64], <FONT COLOR="#112266"><B>const</B></FONT> real_T Mask[512], real_T cii[512])
+<FONT COLOR="#888888"><I>   35   </I></FONT><B>{</B>
+<FONT COLOR="#888888"><I>   36   </I></FONT>    real_T b_cii[512];
+<FONT COLOR="#888888"><I>   37   </I></FONT>    int32_T j3;
+<FONT COLOR="#888888"><I>   38   </I></FONT>    int32_T j2;
+<FONT COLOR="#888888"><I>   39   </I></FONT>    int32_T b_j1;
+<FONT COLOR="#888888"><I>   40   </I></FONT>    int32_T i0;
+<FONT COLOR="#888888"><I>   41   </I></FONT>    real_T b[8];
+<FONT COLOR="#888888"><I>   42   </I></FONT>    real_T b_b[8];
+<FONT COLOR="#888888"><I>   43   </I></FONT>    int32_T i1;
+<FONT COLOR="#888888"><I>   44   </I></FONT>    real_T b_D1[64];
+<FONT COLOR="#888888"><I>   45   </I></FONT>    real_T c_D1[512];
+<FONT COLOR="#888888"><I>   46   </I></FONT>    real_T d_D1[512];
+<FONT COLOR="#888888"><I>   47   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:3' I1 = size(D1,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   48   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:4' I2 = size(D2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   49   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:5' I3 = size(D3,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   50   </I></FONT>    <FONT COLOR="#117755"><I>/* cii = zeros(I1*I2*I3,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   51   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:7' cii = zeros(I1,I2,I3); */</I></FONT>
+<FONT COLOR="#888888"><I>   52   </I></FONT>    memset((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;b_cii[0], 0, <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 9);
+<FONT COLOR="#888888"><I>   53   </I></FONT>    <FONT COLOR="#117755"><I>/* mask = zeros(I1*I2,1); */</I></FONT>
+<FONT COLOR="#888888"><I>   54   </I></FONT>    <FONT COLOR="#117755"><I>/* mask(sub2ind([I1,I2], ind1(1:K)', ind2(1:K)'))=1; */</I></FONT>
+<FONT COLOR="#888888"><I>   55   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:12' for j3=1:I3 */</I></FONT>
+<FONT COLOR="#888888"><I>   56   </I></FONT>    <FONT COLOR="#112266"><B>for</B></FONT> (j3 = 0; j3 &lt; 8; j3++) <B>{</B>
+<FONT COLOR="#888888"><I>   57   </I></FONT>        <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:13' for j2=1:I2 */</I></FONT>
+<FONT COLOR="#888888"><I>   58   </I></FONT>        <FONT COLOR="#112266"><B>for</B></FONT> (j2 = 0; j2 &lt; 8; j2++) <B>{</B>
+<FONT COLOR="#888888"><I>   59   </I></FONT>            <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:14' for j1=1:I1 */</I></FONT>
+<FONT COLOR="#888888"><I>   60   </I></FONT>            <FONT COLOR="#112266"><B>for</B></FONT> (b_j1 = 0; b_j1 &lt; 8; b_j1++) <B>{</B>
+<FONT COLOR="#888888"><I>   61   </I></FONT>                <FONT COLOR="#117755"><I>/* w = kron(D2(:,j2),D1(:,j1)).*mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   62   </I></FONT>                <FONT COLOR="#117755"><I>/* W = (D1(:,j1)*D2(:,j2)').*Mask; */</I></FONT>
+<FONT COLOR="#888888"><I>   63   </I></FONT>                <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:18' w = D1(:,j1)*D2(:,j2)'; */</I></FONT>
+<FONT COLOR="#888888"><I>   64   </I></FONT>                <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   65   </I></FONT>                    b[i0] = D2[i0 + (j2 &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>   66   </I></FONT>                    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:19' w = w(:)*D3(:,j3)'; */</I></FONT>
+<FONT COLOR="#888888"><I>   67   </I></FONT>                    b_b[i0] = D3[i0 + (j3 &lt;&lt; 3)];
+<FONT COLOR="#888888"><I>   68   </I></FONT>                <B>}</B>
+<FONT COLOR="#888888"><I>   69   </I></FONT>                <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:20' w = w(:).*Mask(:); */</I></FONT>
+<FONT COLOR="#888888"><I>   70   </I></FONT>                <FONT COLOR="#117755"><I>/* cii(sub2ind([I1,I2,I3], j1, j2, j3)) = sqrt(sum(w(:).^2)); */</I></FONT>
+<FONT COLOR="#888888"><I>   71   </I></FONT>                <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:22' cii(j1, j2, j3) = sqrt(sum(w(:).^2)); */</I></FONT>
+<FONT COLOR="#888888"><I>   72   </I></FONT>                EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii3D_8_cpp.html#var_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   73   </I></FONT>                <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   74   </I></FONT>                    <FONT COLOR="#112266"><B>for</B></FONT> (i1 = 0; i1 &lt; 8; i1++) <B>{</B>
+<FONT COLOR="#888888"><I>   75   </I></FONT>                        b_D1[i1 + (i0 &lt;&lt; 3)] = D1[i1 + (b_j1 &lt;&lt; 3)] * b[i0];
+<FONT COLOR="#888888"><I>   76   </I></FONT>                    <B>}</B>
+<FONT COLOR="#888888"><I>   77   </I></FONT>                <B>}</B>
+<FONT COLOR="#888888"><I>   78   </I></FONT>                <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 8; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   79   </I></FONT>                    <FONT COLOR="#112266"><B>for</B></FONT> (i1 = 0; i1 &lt; 64; i1++) <B>{</B>
+<FONT COLOR="#888888"><I>   80   </I></FONT>                        c_D1[i1 + (i0 &lt;&lt; 6)] = b_D1[i1] * b_b[i0];
+<FONT COLOR="#888888"><I>   81   </I></FONT>                    <B>}</B>
+<FONT COLOR="#888888"><I>   82   </I></FONT>                <B>}</B>
+<FONT COLOR="#888888"><I>   83   </I></FONT>                <FONT COLOR="#112266"><B>for</B></FONT> (i0 = 0; i0 &lt; 512; i0++) <B>{</B>
+<FONT COLOR="#888888"><I>   84   </I></FONT>                    d_D1[i0] = c_D1[i0] * Mask[i0];
+<FONT COLOR="#888888"><I>   85   </I></FONT>                <B>}</B>
+<FONT COLOR="#888888"><I>   86   </I></FONT>                <A HREF="power_cpp.html#fcn_power" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_power');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">power</FONT></A>(d_D1, 2.0, c_D1);
+<FONT COLOR="#888888"><I>   87   </I></FONT>                b_cii[(b_j1 + (j2 &lt;&lt; 3)) + (j3 &lt;&lt; 6)] = <A HREF="sum_cpp.html#fcn_sum" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_sum');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">sum</FONT></A>(c_D1);
+<FONT COLOR="#888888"><I>   88   </I></FONT>                <A HREF="sqrt_cpp.html#fcn_b_sqrt" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_b_sqrt');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_sqrt</FONT></A>(&amp;b_cii[(b_j1 + (j2 &lt;&lt; 3)) + (j3 &lt;&lt; 6)]);
+<FONT COLOR="#888888"><I>   89   </I></FONT>                EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii3D_8_cpp.html#var_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   90   </I></FONT>                emlrtBreakCheck();
+<FONT COLOR="#888888"><I>   91   </I></FONT>            <B>}</B>
+<FONT COLOR="#888888"><I>   92   </I></FONT>            emlrtBreakCheck();
+<FONT COLOR="#888888"><I>   93   </I></FONT>        <B>}</B>
+<FONT COLOR="#888888"><I>   94   </I></FONT>        emlrtBreakCheck();
+<FONT COLOR="#888888"><I>   95   </I></FONT>    <B>}</B>
+<FONT COLOR="#888888"><I>   96   </I></FONT>    <FONT COLOR="#117755"><I>/* 'Calc_cii3D_8:26' cii = reshape(cii,[I1*I2*I3,1]); */</I></FONT>
+<FONT COLOR="#888888"><I>   97   </I></FONT>    EMLRTPUSHRTSTACK(&amp;<A HREF="Calc_cii3D_8_cpp.html#var_b_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_b_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>   98   </I></FONT>    memcpy((<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;cii[0], (<FONT COLOR="#112266"><B>void</B></FONT> *)&amp;b_cii[0], <FONT COLOR="#112266"><B>sizeof</B></FONT>(real_T) &lt;&lt; 9);
+<FONT COLOR="#888888"><I>   99   </I></FONT>    EMLRTPOPRTSTACK(&amp;<A HREF="Calc_cii3D_8_cpp.html#var_b_emlrtRSI" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_b_emlrtRSI');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">b_emlrtRSI</FONT></A>);
+<FONT COLOR="#888888"><I>  100   </I></FONT><B>}</B>
+<FONT COLOR="#888888"><I>  101   </I></FONT><FONT COLOR="#117755"><I>/* End of code generation (Calc_cii3D_8.cpp) */</I></FONT>
+<FONT COLOR="#888888"><I>  102   </I></FONT></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>
